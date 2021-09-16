@@ -1,0 +1,69 @@
+type Query{
+    item(id: ID): Item!
+    items: [Item!]!
+    search(name: String): Search!
+
+}
+
+type Mutation{
+    newItem(item: ItemInput!): Item!
+}
+
+input ItemInput{
+    id: ID
+    nombre: String!
+    marca: String
+    fotoPequena: String!
+    fotos: [String!]
+    ciudad: String
+    precio: Float!
+    seller: String!
+    reseller: ResellerInput!
+    descripcion: String
+    rating: String 
+
+    
+}
+
+input ResellerInput{
+    id: ID
+    nombre: String!
+    logo: String!
+}
+
+type Item {
+    id: ID!
+    name: String!
+    brand: String
+    thumbnail: String!
+    pictures: [String!]
+    city: City!
+    price: Float!
+    seller: Seller!
+    description: String!
+    rating: Float!    
+}
+
+type Search {
+    query: String
+    total: Int
+    items: [Item]!
+    seller: Seller!
+}
+
+type Seller{
+    id: ID
+    name: String
+    logo: String
+}
+
+type City {
+    id: ID
+    name: String
+}
+
+type Reseller{
+    id: ID!
+    nombre: String!
+    logo: String!
+}

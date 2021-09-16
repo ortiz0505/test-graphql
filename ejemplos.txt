@@ -1,0 +1,21 @@
+{
+    "_id": {
+        "$oid": "613d37c529ea13112c83a094"
+    },
+            "id": 1,
+            "description": "description",
+            "name": "nombreprueba",
+            "brand": "prueba ",
+            "thumbnail": "https://imgur.com/u5TGJSX",
+            "pictures": ["url1", "url2"],
+            "city": {
+                "id": 1,
+                "name": " prueba"
+            },
+            "price": 200.000,
+            "rating": 4,
+            "seller": {
+                "id": 1,
+                "name": "prueba "
+            }
+}
