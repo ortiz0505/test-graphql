@@ -8,8 +8,8 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "start": "node src/server.ts",
-    "build": "node 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,json,graphql",
+    "start": "ts-node src/server.ts",
+    "build": "ts-node 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,json,graphql",
     "start:dev": "npm run build:dev",
     "build:dev": "node 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,json,graphql"
   },
