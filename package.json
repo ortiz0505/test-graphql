@@ -8,6 +8,8 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
+    "tsc": "tsc",
+    "postinstall": "npm run tsc",
     "start": "ts-node src/server.ts",
     "build": "tsc",
     "start:dev": "npm run build:dev",
